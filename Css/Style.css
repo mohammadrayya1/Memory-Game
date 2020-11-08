@@ -1,0 +1,132 @@
+*
+{
+
+box-sizing: border-box;
+
+}
+
+body{
+
+font-family: Arial, Tahoma, sans-serif;
+
+}
+
+.info-container
+{
+background-color: #F6F6F6;
+width: 1080;
+margin: 0 auto;
+padding: 20px;
+font-size: 24px;
+overflow: hidden;
+border: 2px solid #2196f3;
+
+}
+
+.info-container .name
+{
+width: 50%;
+    float: left;
+}
+.info-container .tries
+{
+    width: 50%;
+    float:right;
+    text-align: right;
+}
+.memory-game-block{
+    display: flex;
+    width: 1100;
+    flex-wrap: wrap;
+    margin: 20px auto;
+
+
+}
+.memory-game-block .game-block
+{
+
+height: 200px;
+transition: transform 0.5s ;
+transform-style:preserve-3d ;
+cursor: pointer;
+position: relative;
+flex:1 0 200px;
+margin: 0 10px 20px;
+}
+
+.memory-game-block .game-block .front
+{
+background-color: #333;
+line-height: 200px;
+}
+.memory-game-block .game-block .front::before
+{
+
+content: "!";
+font-size: 140px;
+color: #FFF;
+font-weight: bold;
+
+
+}
+.memory-game-block .game-block .back
+{
+background-color: #607D8B;
+transform: rotateY(180deg);
+
+}
+.memory-game-block .game-block .back img
+{
+    height: 140px;
+    width: 140px;
+    margin-top: 30px;
+
+
+
+}
+
+
+.memory-game-block .game-block .face{
+
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    backface-visibility: hidden;
+    border: 5px solid #2196f3;
+    position: absolute;
+    }
+
+
+    .memory-game-block .game-block.is-flips
+    {
+
+        transform: rotateY(180deg);
+    }
+
+
+    .controls-button
+    {
+
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        background-color: rgb(117 96 128 / 90%);
+
+    }
+    .controls-button span
+    {
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     border-radius: 5px ;
+     background-color:#F44336;
+     color:#FFF;
+     padding:15px 15px;
+     cursor: pointer;
+     text-align: center;
+
+        
+    }
